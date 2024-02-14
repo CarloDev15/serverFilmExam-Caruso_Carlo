@@ -1,0 +1,35 @@
+{
+  "name": "serverFilmExam - Caruso Carlo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.ts",
+    "start": "set NODE_ENV=stage&& tsc && node dist/app.js",
+    "start:prod": "set NODE_ENV=production&& tsc && node dist/app.js",
+    "test": "set NODE_ENV=test&& tsc && mocha ./dist/tests/*.js -timeout=10000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.3",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.1.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/mocha": "^10.0.6",
+    "@types/supertest": "^6.0.2",
+    "@types/uuid": "^9.0.8",
+    "mocha": "^10.3.0",
+    "nodemon": "^3.0.3",
+    "supertest": "^6.3.4"
+  }
+}
