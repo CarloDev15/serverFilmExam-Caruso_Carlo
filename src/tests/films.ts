@@ -140,8 +140,8 @@ describe("Token", () => {
         const { status } = await request(app).post("/films/me").set({ token: body.token });
         assert.equal(status, 200);
     })
-    it("POST /films/token 400 invalid token", async () => {
-        const { status } = await request(app).post("/films/token").set({ token: "123" });
-        assert.equal(status, 400);
-    }) // individuato l'errore, il problema è con il path "/films/token" entra in /films/123 "404 not found", tardi per fixare
+    it("POST /films/token 401 invalid token", async () => {
+        const { status } = await request(app).post("/films/me").set({ token: "123" });
+        assert.equal(status, 401);
+    })
 })
